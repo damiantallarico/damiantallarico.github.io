@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="media-queries.css">
+        <script src="script.js"></script>
+        <title>Formulario</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Formulario de Inscripción al Boletín Semanal
+            </h1>
+        </header>
+        <form id="formulario">
+            <fieldset>
+                <legend>Datos Personales:</legend>
+                <section>
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input class="input_fill_in" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                        <label>
+                            <p id="error_nombre" class="esconder_error">El nombre debe contener entre 3 y 15 caracteres no numéricos.</p>
+                            <p id="vacio_nombre" class="esconder_error">El nombre no puede estar vacío ya que es un campo obligatorio.</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido:</label>
+                        <input class="input_fill_in" type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+                        <label>
+                            <p id="error_apellido" class="esconder_error">El apellido debe contener entre 3 y 15 caracteres no numéricos.</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input class="input_fill_in" name="mail" id="mail" placeholder="Ingrese su E-mail">
+                        <label>
+                            <p id="error_mail" class="esconder_error">El mail debe contener: "username@domain.com".</p>                        
+                        </label>
+                    </div>
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input class="input_fill_in" name="edad" id="edad" placeholder="Ingrese su edad">
+                        <label>
+                            <p id="error_edad" class="esconder_error">La edad debe estar entre 18 y 120 años.</p>
+                        </label>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <legend>Sexo:</legend>
+                        <div class="input_radio_chkbox">
+                            <input type="radio" id="sf" name="sexo" value="sf">
+                            <label for="sf">Femenino</label>
+                        </div>
+                        <div class="input_radio_chkbox">
+                            <input type="radio" id="sm" name="sexo" value="sm">
+                            <label for="sm">Masculino</label>
+                        </div>
+                        <label>
+                            <p id="error_sexo" class="esconder_error">Debe seleccionar al menos una opción.</p>
+                        </label>
+                    </div>
+                    <div>
+                        <legend>Temas de Interés:</legend>
+                        <div class="input_radio_chkbox">
+                            <input type="checkbox" id="dp" name="temas" value="dp">
+                            <label for="dp">Deporte</label>
+                        </div>
+                        <div class="input_radio_chkbox">
+                            <input type="checkbox" id="ms" name="temas" value="ms">
+                            <label for="ms">Música</label>
+                        </div>
+                        <div class="input_radio_chkbox">
+                            <input type="checkbox" id="jg" name="temas" value="jg">
+                            <label for="jg">Juegos</label>
+                        </div>
+                        <div class="input_radio_chkbox">
+                            <input type="checkbox" id="tec" name="temas" value="tec">
+                            <label for="tec">Tecnologías</label>
+                        </div>
+                        <div class="input_radio_chkbox">
+                            <input type="checkbox" id="ot" name="temas" value="ot">
+                            <label for="ot">Otros</label>
+                        </div>
+                        <label>
+                            <p id="error_temas" class="esconder_error">Debe selecionar al menos una opción.</p>                                        
+                        </label>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <legend>País:</legend>
+                        <select id="pais" name="pais">
+                            <option value="argentina">Argentina</option>
+                            <option value="chile">Chile</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="uruguay">Uruguay</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="comentario">Comentario:</label>
+                        <textarea class="input_textarea" type="text" id="comentario" name="comentario" placeholder="Ingrese su comentario"></textarea>
+                    </div>
+                    <div class="space_buttons">
+                        <input class="button" type="submit" value="Enviar">
+                        <input class="button" type="reset" value="Limpiar">
+                    </div>
+                </section>                        
+            </fieldset>
+        </form>
+        <section id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>El registro se ha realizado correctamente!</p>
+            </div>
+        </section>           
+        <footer>
+            <h2>Primer Parcial - LPPA - Damián Tallarico</h2>
+        </footer>
+    </body>
+    </html>
